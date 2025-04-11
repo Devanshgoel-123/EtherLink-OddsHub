@@ -1,0 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /* background: url("../../public/assets/images/bg.svg"); */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0E0E0E;
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "GilmerBold";
+  src: url("/fonts/GilmerBold.otf");
+}
+
+@font-face {
+  font-family: "GilmerMedium";
+  src: url("/fonts/GilmerMedium.otf");
+}
+
+@font-face {
+  font-family: "GilmerRegular";
+  src: url("/fonts/GilmerRegular.otf");
+}
+
+@font-face {
+  font-family: "GilmerLight";
+  src: url("/fonts/GilmerLight.otf");
+}
+
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: url("/fonts/Manrope-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Manrope-Light";
+  src: url("/fonts/Manrope-Light.ttf");
+}
+
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url("/fonts/Manrope-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("/fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("/fonts/Manrope-Bold.ttf");
+}
+
+
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+

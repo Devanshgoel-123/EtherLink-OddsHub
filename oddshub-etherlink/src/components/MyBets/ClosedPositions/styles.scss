@@ -1,0 +1,447 @@
+@import "../../../app/mixin.scss";
+
+.ClosedPositions {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-inline: auto;
+
+  @include md {
+  }
+
+  @include lg {
+    width: 80%;
+  }
+
+  @include xl {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+  @include xxl {
+  }
+
+  .Heading {
+    font-size: 22px;
+    text-align: start;
+
+    @include md {
+    }
+
+    @include lg {
+      font-size: 25px;
+      margin-left: 20px;
+    }
+
+    @include xl {
+      font-size: 29px;
+    }
+
+    @include xxl {
+      font-size: 32px;
+    }
+  }
+
+  .Container {
+    width: 100%;
+    padding-block: 20px;
+    margin-block: 20px;
+    border-radius: 10px;
+    background-color: #17171b;
+    padding-inline: 20px;
+    box-sizing: border-box;
+
+    @include md {
+      padding-block: 30px;
+      padding-inline: 30px;
+    }
+
+    @include lg {
+      border-radius: 16px;
+      margin-block: 20px;
+      padding-inline: 25px;
+      padding-block: 25px;
+    }
+
+    @include xl {
+      margin-block: 30px;
+      padding-inline: 25px;
+      padding-block: 25px;
+    }
+
+    @include xxl {
+      margin-block: 40px;
+      padding-inline: 30px;
+      padding-block: 30px;
+    }
+
+    .Headings {
+      display: flex;
+      font-size: 12px;
+      width: 100%;
+      justify-content: start;
+      color: #818181;
+      margin-bottom: 20px;
+
+      @include md {
+      }
+
+      @include lg {
+        font-size: 13px;
+        justify-content: space-between;
+      }
+
+      @include xl {
+        font-size: 14px;
+      }
+
+      .Status {
+        width: 30%;
+        text-align: left;
+
+        @include md {
+          width: 20%;
+        }
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include xl {
+          width: 20%;
+        }
+
+        @include xxl {
+          width: 20%;
+        }
+      }
+
+     
+      .Event {
+        width: 50%;
+        text-align: left;
+
+        @include md {
+          width: 30%;
+        }
+
+        @include lg {
+          width: 30%;
+        }
+
+        @include xl {
+          width: 30%;
+        }
+
+        @include xxl {
+          width: 30%;
+        }
+      }
+
+      .DatePlaced {
+        text-align: left;
+        display: none;
+
+        @include md {
+          display: block;
+          width: 30%;
+        }
+
+        @include lg {
+          width: 30%;
+        }
+
+        @include xl {
+          width: 30%;
+        }
+
+        @include xxl {
+          width: 30%;
+        }
+      }
+
+      .StakedAmount {
+        text-align: end;
+        display: none;
+
+        @include md {
+          display: block;
+          width: 20%;
+        }
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include xl {
+          width: 20%;
+        }
+
+        @include xxl {
+          width: 20%;
+        }
+      }
+
+      .Prediction {
+        text-align: end;
+        display: none;
+
+        @include md {
+          display: block;
+          width: 20%;
+        }
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include xl {
+          width: 20%;
+        }
+
+        @include xxl {
+          width: 20%;
+        }
+      }
+    }
+
+    .Data {
+      display: flex;
+      font-size: 16px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      margin-top: 20px;
+
+      @include md {
+      }
+
+      @include lg {
+        font-size: 16px;
+        justify-content: space-between;
+      }
+
+      @include xl {
+        margin-top: 30px;
+        font-size: 18px;
+      }
+
+      @include xxl {
+        font-size: 20px;
+      }
+
+      .BetToken {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+
+      .Status {
+        width: 30%;
+        text-align: left;
+
+        @include md {
+          width: 20%;
+        }
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include xl {
+          width: 20%;
+        }
+
+        @include xxl {
+        }
+
+        .Claim {
+          background-color: #d5741c;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 20px;
+          cursor: pointer;
+          width: 80%;
+          padding-block: 5px;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background-color: white;
+            color: #d5741c;
+          }
+
+          @include md {
+          }
+
+          @include lg {
+          }
+
+          @include xl {
+          }
+
+          @include xxl {
+          }
+        }
+        .Won {
+          color: #3dd179;
+        }
+        .Lost {
+          color: #dd7168;
+        }
+
+        
+      }
+
+      .Event {
+        width: 50%;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        @include md {
+          width: 30%;
+        }
+
+        @include lg {
+          width: 30%;
+        }
+
+        @include xl {
+          width: 30%;
+        }
+
+        @include xxl {
+        }
+      }
+
+      .DatePlaced {
+        text-align: left;
+        display: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        @include md {
+          width: 30%;
+          display: block;
+        }
+
+        @include lg {
+          width: 30%;
+        }
+
+        @include xl {
+          width: 30%;
+        }
+
+        @include xxl {
+        }
+      }
+
+      .StakedAmount {
+        text-align: end;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        display: none;
+
+        .TokenLogo {
+          width: 16px;
+          height: 16px;
+          margin-bottom: 3px;
+
+          @include md {
+          }
+
+          @include lg {
+          }
+
+          @include xl {
+            width: 18px;
+            height: 18px;
+          }
+
+          @include xxl {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        @include md {
+          width: 20%;
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+        }
+
+        @include lg {
+          width: 20%;
+          justify-content: flex-end;
+        }
+
+        @include xl {
+          width: 20%;
+        }
+
+        @include xxl {
+        }
+      }
+
+      .Prediction {
+        text-align: end;
+        display: none;
+
+        @include md {
+          width: 20%;
+          display: block;
+        }
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include xl {
+          width: 20%;
+        }
+
+        @include xxl {
+        }
+      }
+    }
+  }
+}
+
+.StatusClaim{
+  min-width: 10%;
+  text-align: left;
+
+  button{
+    background-color: #1133B7;
+    padding: 6px 22px;
+    border-radius: 12px;
+    border: 0px;
+    color: #fff;
+  }
+  @include md {
+    width: 20%;
+  }
+
+  @include lg {
+    width: 20%;
+  }
+
+  @include xl {
+    width: 20%;
+  }
+
+  @include xxl {
+    width: 20%;
+  }
+}

@@ -1,0 +1,262 @@
+ @import "../../../app/mixin.scss";
+ @import url('https://path-to-your-cdn/fonts/proxima-nova/stylesheet.css');
+
+ .BetHeroCard {
+     width: 100%;
+     height: 100%;
+     border-radius: 14px;
+     padding: 15px 20px;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     position: relative;
+     overflow: hidden;
+     cursor: pointer;
+
+
+
+     @include md {}
+
+     @include lg {
+         border-radius: 14px;
+     }
+
+     @include xl {
+         border-radius: 15px;
+         padding: 20px 25px;
+     }
+
+     @include xxl {
+         border-radius: 16px;
+         padding: 25px 30px;
+     }
+
+     .Background-Card {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-size: cover;
+         background-repeat: no-repeat;
+         z-index: 1;
+         transition: all 0.2s ease-in-out;
+
+         
+     }
+
+     .BetHeroCard-HeadingWrapper {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         z-index: 3;
+
+
+         @include md {
+            
+         }
+
+         @include lg {
+            
+         }
+
+         @include xl {
+             gap: 10px;
+         }
+
+         @include xxl {
+             gap: 10px;
+         }
+
+
+         .BetHeroCard-HeadingContainer {
+             width: 100%;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+
+             .Category {
+                 padding: 6px 10px;
+                 background: rgba(238, 238, 238, 0.5);
+                 box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+                 border-radius: 40px;
+                 font-family: 'GilmerMedium';
+                 font-style: normal;
+                 font-weight: 600;
+                 font-size: 10px;
+                 letter-spacing: 0.1px;
+                 color: #FAFAFA;
+                 margin-top: 3px;
+
+
+                 @include md {
+                     padding: 1px 10px;
+                     line-height: 24px;
+                     letter-spacing: 0.5px;
+                 }
+
+                 @include lg {
+                     padding: 1px 10px;
+                     font-size: 10px;
+                 }
+
+                 @include xl {
+                     padding: 1px 10px;
+                     font-size: 11px;
+                 }
+
+                 @include xxl {
+                     padding: 3px 15px;
+                     font-size: 14px;
+                 }
+             }
+
+             .Bet-Details {
+                 display: flex;
+                 align-items: center;
+                 gap: 5px;
+
+                 .Bet-Logo {
+                     width: 25px;
+                     height: 25px;
+
+                     @include md {}
+
+                     @include lg {}
+
+                     @include xl {}
+
+                     @include xxl {}
+                 }
+
+                 .Bet-Name {
+                     color: #FAFAFA;
+                     font-family: 'Manrope-Medium';
+                     font-style: normal;
+                     font-weight: 600;
+                     font-size: 14px;
+                     letter-spacing: 0px;
+
+                     @include md {
+                         font-size: 13px;
+                     }
+
+                     @include lg {
+                         letter-spacing: 0.5px;
+
+                     }
+
+                     @include xl {
+                         font-size: 15px;
+                     }
+
+                     @include xxl {
+                         font-size: 16px;
+                     }
+                 }
+             }
+         }
+
+         .Bet-Heading {
+
+             font-family: 'Manrope-Bold';
+             font-style: normal;
+             font-weight: 600;
+             font-size: 25px;
+             line-height: 48px;
+             background: linear-gradient(180deg, #ffffff 0%, #0094E1 100%);
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent; /* Make the text transparent so the gradient shows */
+             letter-spacing: -0.96px;
+             margin-bottom: 20px;
+
+             @include md {
+                 letter-spacing: -0.96px;
+                 font-size: 25px;
+             }
+
+             @include lg {font-size: 32px;}
+
+             @include xl {
+                 line-height: 48px;
+                 font-size: 35px;
+             }
+
+             @include xxl {
+                  line-height: 48px;
+                 font-size: 40px;
+             }
+         }
+     }
+
+     .Predict-Btn {
+         width: fit-content;
+        //  background: rgba(217, 217, 217, 0.5);
+         border: 1px solid #B8B8B8;
+        //  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+         border-radius: 8px;
+         font-family: 'Manrope-Regular';
+         font-style: normal;
+         font-weight: 600;
+         font-size: 10px;
+         color: #F2F2F2;
+         padding: 5px 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+         z-index: 3;
+         letter-spacing: 0.2px;
+         transition: all 0.2s ease-in-out;
+
+         @include md {
+             letter-spacing: 0.5px;
+         }
+
+         @include lg {
+             padding: 8px 16px;
+             font-size: 11px;
+         }
+
+         @include xl {
+             padding: 10px 20px;
+             font-size: 12px;
+         }
+
+         @include xxl {
+             padding: 10px 20px;
+             font-size: 14px;
+         }
+
+         &:hover {
+             opacity: 0.8;
+         }
+     }
+
+     .Card-Image {
+         position: absolute;
+         bottom: 0px;
+         right: 0;
+         width: 160px;
+         height: 95px;
+         z-index: 3;
+         cursor: pointer;
+
+
+         @include md {}
+
+         @include lg {}
+
+         @include xl {
+             width: 210px;
+             height: 115px;
+         }
+
+         @include xxl {
+             width: 310px;
+             height: 170px;
+         }
+     }
+ }

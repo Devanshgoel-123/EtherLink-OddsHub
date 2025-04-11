@@ -1,0 +1,26 @@
+@import "../../../app/mixin.scss";
+
+.LoaderDiv {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include md {
+        padding: 20px;
+    }
+
+    @include lg {
+        padding: 20px;
+    }
+
+    @include xl {
+        padding: 20px;
+    }
+
+    @include xxl {
+        padding: 20px;
+    }
+}

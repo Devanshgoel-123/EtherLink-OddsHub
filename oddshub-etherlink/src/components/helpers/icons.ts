@@ -1,0 +1,17 @@
+export const CRICKET_LOGO = "/assets/logos/cricketlogo.svg";
+export const F1_LOGO = "/assets/logos/f1.svg";
+export const AMMA_LOGO = "/assets/logos/amma.png";
+export const US_LOGO = "/assets/logos/uslogo.svg";
+export const CLOCK_ICON = "/assets/icons/clock.svg";
+export const CROSS_ICON = "/assets/icons/cross.svg";
+export const BACK_ICON = "/assets/icons/back.svg";
+export const LORDS_LOGO = "/assets/logos/lords.webp";
+export const ETH_LOGO = "/assets/logos/eth.svg";
+export const USDC_LOGO = "/assets/logos/usdc.svg";
+export const UEFA_LOGO = "/assets/logos/uefalogo.svg";
+export const BACK_LOGO = "/assets/icons/arrow.svg";
+export const FIGHTER_IMAGE = "/assets/images/fight.png"
+export const AMMA_IMAGE = "/assets/icons/amma.png";
+export const RAIZE_LOGO="/assets/icons/Logo.svg";
+export const ETHERLINK_LOGO="/assets/logos/etherlink_logo.svg";
+export const XTR_LOGO="/assets/logos/xtr_logo.svg";

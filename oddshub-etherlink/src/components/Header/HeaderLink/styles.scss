@@ -1,0 +1,120 @@
+@import "../../../app/mixin.scss";
+
+.HeaderLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #7B8ED8;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: "Manrope-Regular";
+    text-decoration: none;
+    height: 100%;
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 31px #7B8ED8);
+    transition: all 0.1s ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -27px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        height: 1px;
+        background: url('/assets/images/line2.svg');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: all 0.2s ease;
+        display: none;
+
+        @include md {}
+
+        @include lg {
+            display: block;
+            bottom: -20px;
+            width: 100px;
+        }
+
+        @include xl {
+            bottom: -24px;
+            width: 200px;
+        }
+
+        @include xxl {
+            bottom: -25px;
+            width: 200px;
+        }
+    }
+
+    &:hover::after {
+        width: 0px;
+    }
+
+    @include md {}
+
+    @include lg {
+        font-size: 14px;
+    }
+
+    @include xl {
+        font-size: 15px;
+    }
+
+    @include xxl {
+        font-size: 16px;
+    }
+
+    &:hover {
+        filter: none;
+        color: white;
+    }
+
+    .HeaderLink-Logo {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 3px;
+    }
+}
+
+.HeaderLink-White {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    color: #c6c6c6;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: "Manrope-Regular";
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: all 0.1s ease-in-out;
+
+    @include md {}
+
+    @include lg {
+        font-size: 14px;
+    }
+
+    @include xl {
+        font-size: 15px;
+    }
+
+    @include xxl {
+        font-size: 16px;
+    }
+
+    &:hover {
+        color: #7B8ED8;
+    }
+
+    .HeaderLink-Logo {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 3px;
+    }
+}

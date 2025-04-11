@@ -1,0 +1,20 @@
+@import "../../../app/mixin.scss";
+
+.HeaderMobile {
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #2043cf;
+    box-sizing: border-box;
+
+    @include md {}
+
+    @include lg {
+        display: none;
+    }
+
+    @include xl {}
+
+    @include xxl {}
+}

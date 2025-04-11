@@ -1,0 +1,138 @@
+@import "../../../src/app/mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+.Header-Wrapper {
+    padding: 10px 25px;
+    background-color: #141414;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    @include md {
+        padding: 15px 30px;
+    }
+
+    @include lg {
+        padding: 10px 30px;
+    }
+
+    @include xl {
+        padding: 15px 30px;
+    }
+
+    @include xxl {
+        padding: 15px 150px;
+    }
+
+
+    .Header-LogoContainer {
+       
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+
+        @include md {}
+
+        @include lg {}
+
+        @include xl {
+        gap: 20px;
+        }
+
+        @include xxl {}
+
+        .HeaderText{
+            font-family: "Manrope";
+            background: linear-gradient(270deg, #4463dd 0%, #99a2c6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include md{
+                font-size: 18px;
+            }
+            @include lg{
+                font-size: 20px;
+            }
+            @include xl{
+                font-size: 22px;
+            }
+        }
+        .Header-Logo {
+            
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            
+            .Logo{
+                width: 22px;
+                height: 22px;
+                @include md {
+                    width: 22px;
+                    height: 22px;
+                }
+    
+                @include lg {
+                    font-size: 10px;
+                    object-fit:contain;
+                }
+    
+                @include xl {
+                    width: 32px;
+                    height: 32px;
+                    object-fit: contain;
+                }
+    
+                @include xxl {
+                    width: 35px;
+                    height: 25px;
+                    object-fit: contain;
+                }
+            }
+           
+
+        }
+    }
+
+
+
+    .Header-LinksContainer {
+        grid-column: 2 / 3;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        @include md {}
+
+        @include lg {
+            gap: 20px;
+            display: flex;
+        }
+
+        @include xl {}
+
+        @include xxl {
+            gap: 30px;
+        }
+    }
+
+    .Header-ButtonsContainer {
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+
+        @include md {
+            width: auto;
+        }
+
+        @include lg {}
+
+        @include xl {
+            width: auto;
+        }
+
+        @include xxl {}
+    }
+}

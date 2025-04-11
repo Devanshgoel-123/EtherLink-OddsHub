@@ -1,0 +1,230 @@
+@import "../../../app/mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+.WalletButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .ClaimButton {
+      font-family: "Manrope";
+      box-sizing: border-box;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 5px;
+      color: #7B8ED8;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 2px;
+        background: url("/assets/images/line.svg");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        filter: drop-shadow(5px 5px 31px #2043cf);
+        transition: all 0.3s ease;
+
+        @include md {
+          bottom: -23px;
+          left: 50%;
+        }
+
+        @include lg {
+        }
+
+        @include xl {
+          bottom: -25px;
+          left: 50%;
+        }
+
+        @include xxl {
+        }
+      }
+
+      &:hover {
+        color: white;
+      }
+
+      &:hover::after {
+        width: 0px;
+      }
+
+      .ClaimButtonLogo {
+        width: 15px;
+        height: 15px;
+      }
+
+      span {
+        margin-top: 3px;
+
+        @include md {
+          margin-top: 5px;
+        }
+
+        @include lg {
+        }
+
+        @include xl {
+        }
+
+        @include xxl {
+        }
+
+        .Bold {
+          font-family: "Manrope";
+        }
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+
+      @include lg {
+      }
+
+      @include xl {
+      }
+
+      @include xxl {
+      }
+    }
+
+    .AddressBtn {
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-family: "";
+      color: white;
+      font-size: 11px;
+      letter-spacing: 1px;
+      background-color: #202020;
+      border: 1px solid #3d3d3d;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.1s ease-in-out;
+      @include md {
+        padding: 5px 15px;
+        font-size: 14px;
+      }
+
+      @include lg {
+        padding: 3px 15px;
+        font-size: 12px;
+      }
+
+      @include xl {
+        font-size: 12px;
+      }
+
+      @include xxl {
+        padding: 5px 15px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: #101010;
+      }
+
+      span {
+        margin-top: 3px;
+      }
+
+      .DropdownIcon {
+        font-size: 18px;
+        margin-top: 5px;
+        display: none;
+
+        @include md {
+          display: block;
+        }
+
+        @include lg {
+        }
+
+        @include xl {
+        }
+
+        @include xxl {
+        }
+      }
+
+      .AddressBtn-Logo {
+        width: 15px;
+        height: 15px;
+
+        @include md {
+          width: 15px;
+          height: 15px;
+        }
+
+        @include lg {
+        }
+
+        @include xl {
+        }
+
+        @include xxl {
+        }
+      }
+    }
+  }
+}
+
+.wallet-connect-btn {
+  border-radius: 8px;                    
+  padding: 10px 15px;                     
+  font-family: 'Manrope-Regular';    
+  background: linear-gradient(90deg, #143CD9 0%, #1337C8 25%, #1133B7 50%, #0D2994 75%, #0D278C 100%);
+  color: #fff;                           
+  border: none;                           
+  cursor: pointer;                       
+  transition: all 0.3s ease;             
+}
+
+.wallet-connect-btn:hover {
+  background: #ffffff;                      
+  color: #0E288E;                            
+}
+
+.wallet-connected-btn {
+      border-radius: 8px;
+      font-family: 'Manrope-Light'; 
+      padding: 8px 10px;
+      cursor: pointer;
+      color: #D4D3D3;
+      font-size: 11px;
+      letter-spacing: 1px;
+      background-color: #202020;
+      border: 0.5px solid #0095E2;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: #101010;
+      }
+}

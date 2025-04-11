@@ -1,0 +1,109 @@
+@import "../../../mixin.scss";
+
+.MarketClosed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "GilmerRegular";
+  font-style: normal;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  width: 540px;
+  line-height: 30px;
+}
+
+.BetDetailView {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include md {
+    padding-top: 40px;
+  }
+
+  @include lg {
+  }
+
+  @include xl {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: center;
+  }
+
+  @include xxl {
+  }
+
+  .GoBack {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    font-family: "GilmerRegular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding-inline: 20px;
+    @include md{
+
+    }
+    @include lg {
+      width: 50%;
+    }
+
+    @include xl {
+      font-size: 15px;
+      width: 40%;
+    }
+
+    @include xxl {
+      font-size: 18px;
+    }
+
+    .GoBackLogo {
+      width: 20px;
+      height: 20px;
+      padding: 8px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+
+      @include md {
+      }
+
+      @include lg {
+      }
+
+      @include xl {
+      }
+
+      @include xxl {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .DetailsAndActions {
+    display: flex;
+     @include md{
+      flex-direction: column;
+      align-items: center;
+    }
+    @include lg {
+      width: 50%;
+    }
+
+    @include xl{
+      width: 40%;
+    }
+  }
+}
+

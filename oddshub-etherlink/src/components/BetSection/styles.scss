@@ -1,0 +1,268 @@
+@import "../../app/mixin.scss";
+
+.BetSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .BetSection-Hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.2s ease-in;
+
+    @include md {
+      flex-direction: row;
+    }
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    @include xl {
+      flex-direction: row;
+    }
+
+    @include xxl {
+      flex-direction: row;
+    }
+
+    .BetSection-HeroCard {
+      width: 100%;
+      height: auto;
+
+      @include md {}
+
+      @include lg {}
+
+      @include xl {}
+
+      @include xxl {
+        width: 50%;
+        height: 250px;
+      }
+    }
+  }
+
+  .BetSection-CardWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    transition: all 0.2s ease-in-out;
+
+    .Tabs-Section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: scroll;
+
+      @include md {}
+
+      @include lg {}
+
+      @include xl {}
+
+      @include xxl {
+        gap: 50px;
+      }
+
+      .Tab {
+        flex: 0 0 auto;
+        padding: 5px 10px;
+        font-family: "GilmerMedium";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 24px;
+        background: linear-gradient(270deg, #faf9f9 0%, #d7d7d7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        cursor: pointer;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+
+        @include md {}
+
+        @include lg {
+          padding: 5px 20px;
+          font-size: 12px;
+        }
+
+        @include xl {}
+
+        @include xxl {
+          padding: 8px 20px;
+          font-size: 14px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .Tab-Active {
+        flex: 0 0 auto;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        background: linear-gradient(
+          90deg,
+          #2043cf 0%,
+          #1f43d5 25%,
+          #3a59d6 50%,
+          #1f43d5 75%,
+          #2043cf 100%
+        );
+        border-radius: 8px;
+        font-family: "GilmerMedium";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        line-height: 24px;
+        width: fit-content;
+        color: white;
+        cursor: pointer;
+        letter-spacing: 0.2px;
+        animation: fadeIn 0.2s ease-in-out forwards;
+
+        @include md {
+          letter-spacing: 0.5px;
+        }
+
+        @include lg {
+          padding: 5px 20px;
+          font-size: 12px;
+          border-radius: 8px;
+        }
+
+        @include xl {
+          padding: 6px 18px;
+          font-size: 13px;
+          border-radius: 8px;
+        }
+
+        @include xxl {
+          padding: 8px 20px;
+          font-size: 14px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .BetCard-Wrapper {
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 20px;
+
+      @include md {}
+
+      @include lg {}
+
+      @include xl {}
+
+      @include xxl {}
+
+      .LoaderDiv {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+      }
+
+      .PlaceholderText {
+        width: 100%;
+        padding-top: 100px;
+        text-align: center;
+        font-family: 'GilmerMedium';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        padding-top: 40px;
+        color: #9C9C9C;
+
+        @include md {}
+
+        @include lg {
+          font-size: 20px;
+          padding-top: 40px;
+        }
+
+        @include xl {
+          font-size: 25px;
+          padding-top: 80px;
+        }
+
+        @include xxl {
+          font-size: 30px;
+          padding-top: 100px;
+        }
+
+      }
+
+      .BetCard-Container {
+        width: 100%;
+        height: auto;
+
+        @include md {
+          width: 350px;
+          height: auto;
+        }
+
+        @include lg {
+          width: 30%;
+          height: 280px;
+        }
+
+        @include xl {
+          width: 30%;
+          height: 310px;
+        }
+
+        @include xxl {
+          width: 33%;
+          max-width: 400px;
+          height: 310px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
