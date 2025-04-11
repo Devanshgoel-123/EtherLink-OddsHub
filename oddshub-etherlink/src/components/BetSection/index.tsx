@@ -14,7 +14,7 @@ interface Props {}
 
 
 const BetSection: NextPage<Props> = ({}) => {
-  const [activeTab, setActiveTab] = useState<number>(2);
+  const [activeTab, setActiveTab] = useState<number>(3);
   const [loading, setLoading] = useState<boolean>(false);
   const [contMarkets, setContMarkets] = useState<Market[]>([]);
   const [sportsMarkets,setSportsMarkets]=useState<SportsMarket[]>([]);
@@ -29,7 +29,8 @@ const BetSection: NextPage<Props> = ({}) => {
 
   const {finalData}=useGetMarket();
   const {cryptoMarket}=useGetCryptoMarket();
-   const {sportsMarket,isLoading,error}=useGetSportsMarket()
+  const {sportsMarket,isLoading,error}=useGetSportsMarket();
+
   useEffect(()=>{
     if(finalData){
       setContMarkets(finalData)
@@ -42,6 +43,10 @@ const BetSection: NextPage<Props> = ({}) => {
   const Tabs=[
     {
       name:"Trending Markets",
+      activeTab:3
+    },
+    {
+      name:"Global Politics",
       activeTab:2
     },
     {
@@ -164,7 +169,7 @@ const BetSection: NextPage<Props> = ({}) => {
               </motion.span>
             )
           
-          ) : activeTab==1 ? (
+          ) : activeTab == 1 ? (
             cryptoMarkets.length > 0 && cryptoMarkets.filter((market) => market.is_active).length > 0 ? (
               cryptoMarkets
                 .filter((market) => market.is_active)
@@ -194,6 +199,35 @@ const BetSection: NextPage<Props> = ({}) => {
                 No Active Events
               </motion.span>
             )
+          ) : activeTab == 3 ? (
+            [...contMarkets, ...sportsMarkets, ...cryptoMarkets].filter((market) => market.is_active).length > 0 ? (
+              [...contMarkets, ...sportsMarkets, ...cryptoMarkets]
+                 .filter((market) => market.is_active)
+                 .map((item, index) => (
+                   <div key={index} className='BetCard-Container'>
+                     <ContBetCard
+                       marketId={Number(item.market_id.toString())}
+                       category={item.category}
+                       logo={item.image}
+                       deadline={item.deadline.toString()}
+                       heading={item.name.toString()}
+                       subHeading={item.description}
+                       outcomes={item.outcomes}
+                       isActive={item.is_active}
+                       moneyInPool={item.money_in_pool}
+                     />
+                   </div>
+               ))
+             ) : (
+               <motion.span
+                 initial={{ y: 20, opacity: 0 }}
+                 animate={{ y: 0, opacity: 1 }}
+                 transition={{ ease: "easeInOut", duration: 0.25 }}
+                 className='PlaceholderText'
+               >
+                 No Active Events
+               </motion.span>
+             )
           ) :
            (
             <motion.span
