@@ -45,31 +45,21 @@ export default function AdminPortal() {
   const [outcome1, setOutcome1] = useState("");
   const [outcome2, setOutcome2] = useState("");
   const [deadline, setDeadline] = useState(Number(new Date().getTime)/1000);
-  const [image, setImage] = useState("");
-  const [fightImage, setFightImage] = useState("");
+  const [image, setImage] = useState<string>("");
+  const [fightImage, setFightImage] = useState<string>("");
   const [canCreate, setCanCreate] = useState(false);
 
   const {address}=useAccount();
 
   useEffect(()=>{
-    if(address===undefined){
+    if(address===undefined || image === "" || fightImage === ""){
       setCanCreate(false)
     }else{
       setCanCreate(true)
     }
-  },[address])
+  },[address,fightImage,image])
   const [action, setAction] = useState(0);
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBBOnIaqM2JbY2Ddjnx4cCHOn-unlhwUCM",
-//   authDomain: "baseforesight.firebaseapp.com",
-//   projectId: "baseforesight",
-//   storageBucket: "baseforesight.appspot.com",
-//   messagingSenderId: "208805678834",
-//   appId: "1:208805678834:web:ebd18499dd40958c640a6b"
-// };
-
-  // const app = initializeApp(firebaseConfig);
   
   const { createMarket } = useCreateMarket({
     heading,
