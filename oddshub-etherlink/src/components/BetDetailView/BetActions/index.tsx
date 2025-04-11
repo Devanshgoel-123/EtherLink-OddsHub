@@ -82,10 +82,12 @@ const BetActions: NextPage<Props> = ({ outcomes, moneyInPool, category }) => {
         const timeout = setTimeout(() => {
           const betAmountParsed = parseUnits(betAmount, NATIVE_DECIMALS_ETHERLINK).toString();
           console.log("The bet amount parsed is",betAmountParsed);
+          
           const poolAmount = moneyInPool;
           const outcomeShares = userChoice === 0
             ? outcomes[0].bought_shares.toString()
             : outcomes[1].bought_shares.toString();
+          console.log(outcomeShares)
           const numerator = parseFloat(betAmountParsed) * (parseFloat(betAmountParsed) + poolAmount);
           const denominator = parseFloat(betAmountParsed) + parseFloat(outcomeShares);
           const result = numerator / denominator;
@@ -177,7 +179,7 @@ const BetActions: NextPage<Props> = ({ outcomes, moneyInPool, category }) => {
         </Box>
         <span className='BalanceField'>
           {address
-            ? "Balance: " +(Number(balance.data?.value.toString())/10**(balance.data?.decimals || 8)).toFixed(6) + " XTR "
+            ? "Balance: " +(Number(balance.data?.value.toString())/10**(balance.data?.decimals || 18)).toFixed(6) + " XTR "
             : "Please connect your wallet."}{" "}
         </span>
       </Box>
