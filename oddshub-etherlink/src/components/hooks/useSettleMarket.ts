@@ -1,6 +1,6 @@
 import { enqueueSnackbar } from "notistack";
 import axios from "axios";
-import abi from "@/abi/MarketFactory";
+import {abi} from "@/abi/MarketFactory";
 import {useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 import { CONTRACT_ADDRESS } from "../helpers/constants";
 import { config } from "../Web3provider";
@@ -68,10 +68,10 @@ function useSettleMarket() {
       writeContract({
         abi:abi,
         address:CONTRACT_ADDRESS,
-        functionName:`${functionName}`,
+        functionName:"resolveMarket",
         args:[
-          marketId,
-          winning_outcome
+          2,
+          2
         ]
       })
       

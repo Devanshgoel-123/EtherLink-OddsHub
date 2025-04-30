@@ -1,6 +1,6 @@
 import { enqueueSnackbar } from "notistack";
 import axios from "axios";
-import abi from "@/abi/MarketFactory";
+import { abi } from "@/abi/MarketFactory";
 import { useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 import { CONTRACT_ADDRESS } from "../helpers/constants";
 import { config } from "../Web3provider";
@@ -111,15 +111,14 @@ function useCreateMarket({
       writeContract({
         abi:abi,
         address:CONTRACT_ADDRESS,
-        functionName:'create_market',
+        functionName:'createMarket',
         args:[
           heading,
-          description,
+          image,
+          category,
           outcome1,
           outcome2,
-          category,
-          image,
-          deadline
+          150
         ]
       })
       
